@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid-template-areas、grid-area</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: repeat(3, 150px);
+      grid-template-rows: repeat(3, 150px);
+      grid-template-areas: 
+        "header header ."
+        "sidebar content content"
+        "footer footer footer";
+    }
+    .header {
+      text-align: center;
+      font-size: 200%;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-area: header;
+      background: red;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background: blue;
+      text-align: center;
+      font-size: 200%;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+    }
+    .content {
+      grid-area: content;
+      background: green;
+      text-align: center;
+      font-size: 200%;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+    }
+    .footer {
+      grid-area: footer;
+      background: yellow;
+      text-align: center;
+      font-size: 200%;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="header">header</div>
+      <div class="sidebar">sidebar</div>
+      <div class="content">content</div>
+      <div class="footer">footer</div>
+    </div>
+</body>
+</html>
